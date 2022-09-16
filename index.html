@@ -1,615 +1,468 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
 
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-	<title>Eduvizo - All Round Engineering Solution </title>
+    <head>
 
-	<!-- Favicons -->
-	<link type="image/x-icon" href="assets/img/favicon.png" rel="icon">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+        <title>Eduvizo - All Round Engineering Solution </title>
+    
+        <!-- Favicons -->
+        <link type="image/x-icon" href="assets/img/favicon.png" rel="icon">
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    
+        <!-- Fontawesome CSS -->
+        <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
+        <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+    
+        <!-- Main CSS -->
+        <link rel="stylesheet" href="assets/css/style.css">
 
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-
-	<!-- Fontawesome CSS -->
-	<link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
-	<link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
-
-	<!-- Main CSS -->
-	<link rel="stylesheet" href="assets/css/style.css">
-
-	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	<!--[if lt IE 9]>
-			<script src="assets/js/html5shiv.min.js"></script>
-			<script src="assets/js/respond.min.js"></script>
-		<![endif]-->
-	<style>
-		@media screen and (max-width: 600px) {
-			#title_message {
-				visibility: hidden;
-				clear: both;
-				float: left;
-				margin: 10px auto 5px 20px;
-				width: 28%;
-				display: none;
-			}
-            .vieww-btn{
-                font-size: 20px!important;
-                padding: 8px!important;
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+                <script src="assets/js/html5shiv.min.js"></script>
+                <script src="assets/js/respond.min.js"></script>
+            <![endif]-->
+        <style>
+            @media screen and (max-width: 600px) {
+                #title_message {
+                    visibility: hidden;
+                    clear: both;
+                    float: left;
+                    margin: 10px auto 5px 20px;
+                    width: 28%;
+                    display: none;
+                }
+                .vieww-btn{
+                    font-size: 20px!important;
+                    padding: 8px!important;
+                }
+                .heading{
+                    font-size: 40px!important;
+                }
+                .navbar-brand.logo img{
+                    position: absolute!important;
+                    top: 20px!important;
+                    right: 10px!important;
+                }
+                .profile-widget{
+                    width: 100px!important;
+                    margin: 5px 2px!important;
+                }
             }
-            .heading{
-                font-size: 40px!important;
+            @media only screen and (min-width:960px) {
+                .hidedesktop {
+                    display: none;
+                }
             }
-            .navbar-brand.logo img{
-                position: absolute!important;
-                top: 20px!important;
-                right: 10px!important;
-
+            #how_use {
+                padding: 0;
             }
-            .profile-widget{
-                width: 100px!important;
-                margin: 5px 2px!important;
+            @media (max-width: 992px) {
+                .needImg {
+                display: none;
+                }
             }
-		}
 
-		@media only screen and (min-width:960px) {
-			.hidedesktop {
-				display: none;
-			}
-		}
-
-        #how_use {
-            padding: 0;
-        }
-
-        @media (max-width: 992px) {
-            .needImg {
-            display: none;
+            .card_box{
+                max-width: 200px!important;
+                border: 2px ridge #aaa;
+                border-radius: 20px;
+                padding: 10px;
+                margin: 20px 10px;
+                background-color: white;
+                /* flex-grow: 1; */
             }
-        }
+            .btn{
+                font-size: 0.95rem;
+            }
+            @media only screen and (max-width: 900px) {
+                .card_box {
+                        width: 40%;
+                        margin: 3%;
+                    }
+            }
+            .round {
+                background-color: blue;
+                border-radius: 15%;
+            }
+            .dropdown-menu {
+                left: -110% !important;
+            }
+            .bg-gray-100 {
+                background-color: #b9e93d;
+            }
+            .dropdown-item:hover {
+                background-color: green;
+            }
+            .btn-icon {
+                color: #fff;
+            }
+            .mt-4{
+                margin-top:0rem !important;
+            }
+            .py-24{
+             padding-top:2rem !important;
+            }
+            @media screen and (max-width:500px){
+                .card-footer{
+                    padding: 0.75rem 0rem !important;
+                }
+                .card_box{
+                    margin: 10px 5px!important;
+                }
+            }
+            @media screen and (max-width: 1000px) {
+                .change-min-width{
+                min-width: 80px!important;
+                }
+                .inline-flex {
+                display: none;
+                }
+                .w-14 {
+                position: absolute;
+                left: 5%;
+                }
+                .ml-3 {
+                text-align: center;
+                }
+            }
+            @media screen and (max-width: 600px) {
+                #title_message {
+                    visibility: hidden;
+                    clear: both;
+                    float: left;
+                    margin: 10px auto 5px 20px;
+                    width: 28%;
+                    display: none;
+                }
+                .vieww-btn{
+                    font-size: 20px!important;
+                    padding: 8px!important;
+                }
+                .heading{
+                    font-size: 40px!important;
+                }
+                .navbar-brand.logo img{
+                    position: absolute!important;
+                    top: 20px!important;
+                    right: 10px!important;
+                }
+            }
+            @media only screen and (min-width:960px) {
+                .hidedesktop {
+                    display: none;
+                }
+            }
+            #how_use {
+                padding: 0;
+            }
+            @media (max-width: 992px) {
+                .needImg {
+                display: none;
+                }
+            }
+            .img-fluid-1{
+                height: 200px;
+                object-fit: cover;
+                object-position: center;
+            }
 
-
-	</style>
-
-    <script src="https://cdn.tailwindcss.com"></script>
-
-</head>
-
+        </style>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    
 <body>
     	<!-- Main Wrapper -->
 	<div class="main-wrapper">
 
-		<!-- Header -->
-		<header class="header">
-			<nav class="navbar navbar-expand-lg header-nav">
-				<div class="navbar-header">
-					<a id="mobile_btn" href="javascript:void(0);">
-						<span class="bar-icon">
-							<span></span>
-							<span></span>
-							<span></span>
-						</span>
-					</a>
-					<a href="index.html" class="navbar-brand logo">
-						<img src="assets/img/logo.png" class="img-fluid" alt="Logo">
-					</a>
-				</div>
-				<div class="main-menu-wrapper">
-					<div class="menu-header">
-						<a href="index.html" class="menu-logo">
-							<img src="assets/img/logo.png" class="img-fluid" alt="Logo">
-						</a>
-						<a id="menu_close" class="menu-close" href="javascript:void(0);">
-							<i class="fas fa-times"></i>
-						</a>
-					</div>
-					<ul class="main-nav">
-						<li class="active">
-							<a href="index.html">Home</a>
-						</li>
-
-
-
-						<li class="active">
-							<a href="#tutor_home">Tutor Home</a>
-						</li>
-
-
-
-						<li class="active">
-							<a href="#about_us">About Us</a>
-						</li>
-
-						<li class="active">
-							<a href="#how_use">How to Use</a>
-						</li>
-
-						<li class="active">
-							<a href="#contact">Contact Us</a>
-						</li>
-
-
-
-					</ul>
-				</div>
-			</nav>
-		</header>
-		<!-- /Header -->
-
-        <div id="home"  <!-- style="padding: 30px;" -->>
-            <div class="flex flex-row justify-content-around flex-wrap">
-                <div style="max-width: 600px; align-items: center; margin: auto;">
-                    <div class="section-header ">
-                        <h2 class="heading" style="font-size:64px; font-weight:600; text-align:center;"> Connect to IITians in an Instant</h2>
-                    </div>
-                    <div  id="">
-                        <a href="" class="btn vieww-btn">App Coming Soon</a>
-                    </div>
-                </div>
-                <div max-width="800px">
-                    <img src="assets/img/slider.png" style="width:100%;">
-                </div>
-            </div>
-        </div>
-
-
-    <div id="tutor_home" style="width: 80%; margin: auto;" class="flex flex-row flex-wrap justify-content-around">
-        <div class="profile-widget" class="profile-widget" style="border-radius:15px;  margin: 5px">
-            <div class="do">
-                <a href="https://topmate.io/eduvizo_india/56434">
-
-                    <center>
-                        <img class="img-fluid" alt="User Image" src="assets/img/tutors/aman.jpeg"
-                            style="width:114px; height:114px; text-align:center; border-radius:15px;">
-                    </center>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar navbar-expand-lg header-nav">
+            <div class="navbar-header">
+                <a id="mobile_btn" href="javascript:void(0);">
+                    <span class="bar-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </a>
+                <a href="index.html" class="navbar-brand logo">
+                    <img src="assets/img/logo.png" class="img-fluid" alt="Logo">
                 </a>
             </div>
-            <div class="pro-content">
-                <h3 class="title">
-                    <a href="https://topmate.io/eduvizo_india/56434"></a>
-                </h3>
+            <div class="main-menu-wrapper">
+                <div class="menu-header">
+                    <a href="index.html" class="menu-logo">
+                        <img src="assets/img/logo.png" class="img-fluid" alt="Logo">
+                    </a>
+                    <a id="menu_close" class="menu-close" href="javascript:void(0);">
+                        <i class="fas fa-times"></i>
+                    </a>
+                </div>
+                <ul class="main-nav">
+                    <li class="active">
+                        <a href="index.html">Home</a>
+                    </li>
 
-                <center>
-                    <p style="width:161px; color:#000; margin-top:-30px;">
-                        <strong>
-                            Aman Mall
-                        </strong>
-                    </p>
-                </center>
-                <p style="font-size:15px; margin-top:1px; text-align: center;">IIT Guwahati</p>
-                <div class="row row-sm">
-                    <div class="col-12" style="width:147px; height:42px; font-size:20px; border-radius:15px;">
-                        <a href="https://topmate.io/eduvizo_india/56434" class="btn boook-btn">Connect Now</a>
-                    </div>
+
+
+                    <li class="active">
+                        <a href="#tutor_home">Tutor Home</a>
+                    </li>
+
+
+
+                    <li class="active">
+                        <a href="#about_us">About Us</a>
+                    </li>
+
+                    <li class="active">
+                        <a href="#how_use">How to Use</a>
+                    </li>
+
+                    <li class="active">
+                        <a href="#contact">Contact Us</a>
+                    </li>
+
+
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    <div id="home"  <!-- style="padding: 30px;" -->>
+        <div class="flex flex-row justify-content-around flex-wrap">
+            <div style="max-width: 600px; align-items: center; margin: auto;">
+                <div class="section-header ">
+                    <h2 class="heading" style="font-size:64px; font-weight:600; text-align:center;"> Connect to IITians in an Instant</h2>
+                </div>
+                <div  id="">
+                    <a href="" class="btn vieww-btn">App Coming Soon</a>
                 </div>
             </div>
-        </div>
-	   
-	     <div class="profile-widget" class="profile-widget" style="border-radius:15px;  margin: 5px">
-            <div class="do">
-                <a href="https://topmate.io/eduvizo_india/56434">
-
-                    <center>
-                        <img class="img-fluid" alt="User Image" src="assets/img/tutors/anoushka.jpeg"
-                            style="width:114px; height:114px; text-align:center; border-radius:15px;">
-                    </center>
-                </a>
-            </div>
-            <div class="pro-content">
-                <h3 class="title">
-                    <a href="https://topmate.io/eduvizo_india/56434"></a>
-                </h3>
-
-                <center>
-                    <p style="width:161px; color:#000; margin-top:-30px;">
-                        <strong>
-                            Anoushka Arya
-                        </strong>
-                    </p>
-                </center>
-                <p style="font-size:15px; margin-top:1px; text-align: center;">NIT Allahabad</p>
-                <div class="row row-sm">
-                    <div class="col-12" style="width:147px; height:42px; font-size:20px; border-radius:15px;">
-                        <a href="https://topmate.io/eduvizo_india/56434" class="btn boook-btn">Connect Now</a>
-                    </div>
-                </div>
+            <div max-width="800px">
+                <img src="assets/img/slider.png" style="width:100%;">
             </div>
         </div>
-	    
-	    
-	    
-	    
-	    <div class="profile-widget" class="profile-widget" style="border-radius:15px;  margin: 5px">
-            <div class="do">
-                <a href="https://topmate.io/eduvizo_india/56434">
-
-                    <center>
-                        <img class="img-fluid" alt="User Image" src="assets/img/tutors/aryaman.jpeg"
-                            style="width:114px; height:114px; text-align:center; border-radius:15px;">
-                    </center>
-                </a>
-            </div>
-            <div class="pro-content">
-                <h3 class="title">
-                    <a href="https://topmate.io/eduvizo_india/56434"></a>
-                </h3>
-
-                <center>
-                    <p style="width:161px; color:#000; margin-top:-30px;">
-                        <strong>
-                            Aryaman Mihir Seth
-                        </strong>
-                    </p>
-                </center>
-                <p style="font-size:15px; margin-top:1px; text-align: center;">IIT Bombay</p>
-                <div class="row row-sm">
-                    <div class="col-12" style="width:147px; height:42px; font-size:20px; border-radius:15px;">
-                        <a href="https://topmate.io/eduvizo_india/56434" class="btn boook-btn">Connect Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-	    
-	    
-	    <div class="profile-widget" class="profile-widget" style="border-radius:15px;  margin: 5px">
-            <div class="do">
-                <a href="https://topmate.io/eduvizo_india/56434">
-
-                    <center>
-                        <img class="img-fluid" alt="User Image" src="assets/img/tutors/bhunesh.jpeg"
-                            style="width:114px; height:114px; text-align:center; border-radius:15px;">
-                    </center>
-                </a>
-            </div>
-            <div class="pro-content">
-                <h3 class="title">
-                    <a href="https://topmate.io/eduvizo_india/56434"></a>
-                </h3>
-
-                <center>
-                    <p style="width:161px; color:#000; margin-top:-30px;">
-                        <strong>
-                            Bhunesh Bansal
-                        </strong>
-                    </p>
-                </center>
-                <p style="font-size:15px; margin-top:1px; text-align: center;">Thapar Institute of Engineering & Technology</p>
-                <div class="row row-sm">
-                    <div class="col-12" style="width:147px; height:42px; font-size:20px; border-radius:15px;">
-                        <a href="https://topmate.io/eduvizo_india/56434" class="btn boook-btn">Connect Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-	    
-	    <div class="profile-widget" class="profile-widget" style="border-radius:15px;  margin: 5px">
-            <div class="do">
-                <a href="https://topmate.io/eduvizo_india/56434">
-
-                    <center>
-                        <img class="img-fluid" alt="User Image" src="assets/img/tutors/eshan.jpeg"
-                            style="width:114px; height:114px; text-align:center; border-radius:15px;">
-                    </center>
-                </a>
-            </div>
-            <div class="pro-content">
-                <h3 class="title">
-                    <a href="https://topmate.io/eduvizo_india/56434"></a>
-                </h3>
-
-                <center>
-                    <p style="width:161px; color:#000; margin-top:-30px;">
-                        <strong>
-                            Eshan Gupta
-                        </strong>
-                    </p>
-                </center>
-                <p style="font-size:15px; margin-top:1px; text-align: center;">IIT Hyderabad</p>
-                <div class="row row-sm">
-                    <div class="col-12" style="width:147px; height:42px; font-size:20px; border-radius:15px;">
-                        <a href="https://topmate.io/eduvizo_india/56434" class="btn boook-btn">Connect Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-	    
-	    <div class="profile-widget" class="profile-widget" style="border-radius:15px;  margin: 5px">
-            <div class="do">
-                <a href="https://topmate.io/eduvizo_india/56434">
-
-                    <center>
-                        <img class="img-fluid" alt="User Image" src="assets/img/tutors/mahesh.jpg"
-                            style="width:114px; height:114px; text-align:center; border-radius:15px;">
-                    </center>
-                </a>
-            </div>
-            <div class="pro-content">
-                <h3 class="title">
-                    <a href="https://topmate.io/eduvizo_india/56434"></a>
-                </h3>
-
-                <center>
-                    <p style="width:161px; color:#000; margin-top:-30px;">
-                        <strong>
-                            Mahesh Baijal
-                        </strong>
-                    </p>
-                </center>
-                <p style="font-size:15px; margin-top:1px; text-align: center;">IIT Bombay</p>
-                <div class="row row-sm">
-                    <div class="col-12" style="width:147px; height:42px; font-size:20px; border-radius:15px;">
-                        <a href="https://topmate.io/eduvizo_india/56434" class="btn boook-btn">Connect Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-	    
-	    <div class="profile-widget" class="profile-widget" style="border-radius:15px;  margin: 5px">
-            <div class="do">
-                <a href="https://topmate.io/eduvizo_india/56434">
-
-                    <center>
-                        <img class="img-fluid" alt="User Image" src="assets/img/tutors/nitya.jpeg"
-                            style="width:114px; height:114px; text-align:center; border-radius:15px;">
-                    </center>
-                </a>
-            </div>
-            <div class="pro-content">
-                <h3 class="title">
-                    <a href="https://topmate.io/eduvizo_india/56434"></a>
-                </h3>
-
-                <center>
-                    <p style="width:161px; color:#000; margin-top:-30px;">
-                        <strong>
-                            Nitya Aggarwal
-                        </strong>
-                    </p>
-                </center>
-                <p style="font-size:15px; margin-top:1px; text-align: center;">IIT Kanpur</p>
-                <div class="row row-sm">
-                    <div class="col-12" style="width:147px; height:42px; font-size:20px; border-radius:15px;">
-                        <a href="https://topmate.io/eduvizo_india/56434" class="btn boook-btn">Connect Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-	    
-	    <div class="profile-widget" class="profile-widget" style="border-radius:15px;  margin: 5px">
-            <div class="do">
-                <a href="https://topmate.io/eduvizo_india/56434">
-
-                    <center>
-                        <img class="img-fluid" alt="User Image" src="assets/img/tutors/satyam.jpeg"
-                            style="width:114px; height:114px; text-align:center; border-radius:15px;">
-                    </center>
-                </a>
-            </div>
-            <div class="pro-content">
-                <h3 class="title">
-                    <a href="https://topmate.io/eduvizo_india/56434"></a>
-                </h3>
-
-                <center>
-                    <p style="width:161px; color:#000; margin-top:-30px;">
-                        <strong>
-                            Satyam Saroj
-                        </strong>
-                    </p>
-                </center>
-                <p style="font-size:15px; margin-top:1px; text-align: center;">IIT Mandi</p>
-                <div class="row row-sm">
-                    <div class="col-12" style="width:147px; height:42px; font-size:20px; border-radius:15px;">
-                        <a href="https://topmate.io/eduvizo_india/56434" class="btn boook-btn">Connect Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-	    
-	    <div class="profile-widget" class="profile-widget" style="border-radius:15px;  margin: 5px">
-            <div class="do">
-                <a href="https://topmate.io/eduvizo_india/56434">
-
-                    <center>
-                        <img class="img-fluid" alt="User Image" src="assets/img/tutors/shashank.jpeg"
-                            style="width:114px; height:114px; text-align:center; border-radius:15px;">
-                    </center>
-                </a>
-            </div>
-            <div class="pro-content">
-                <h3 class="title">
-                    <a href="https://topmate.io/eduvizo_india/56434"></a>
-                </h3>
-
-                <center>
-                    <p style="width:161px; color:#000; margin-top:-30px;">
-                        <strong>
-                            Shashank Kumar
-                        </strong>
-                    </p>
-                </center>
-                <p style="font-size:15px; margin-top:1px; text-align: center;">IIT Jodhpur</p>
-                <div class="row row-sm">
-                    <div class="col-12" style="width:147px; height:42px; font-size:20px; border-radius:15px;">
-                        <a href="https://topmate.io/eduvizo_india/56434" class="btn boook-btn">Connect Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-	    
-	    <div class="profile-widget" class="profile-widget" style="border-radius:15px;  margin: 5px">
-            <div class="do">
-                <a href="https://topmate.io/eduvizo_india/56434">
-
-                    <center>
-                        <img class="img-fluid" alt="User Image" src="assets/img/tutors/tanmay.jpeg"
-                            style="width:114px; height:114px; text-align:center; border-radius:15px;">
-                    </center>
-                </a>
-            </div>
-            <div class="pro-content">
-                <h3 class="title">
-                    <a href="https://topmate.io/eduvizo_india/56434"></a>
-                </h3>
-
-                <center>
-                    <p style="width:161px; color:#000; margin-top:-30px;">
-                        <strong>
-                            Tanmay Garg
-                        </strong>
-                    </p>
-                </center>
-                <p style="font-size:15px; margin-top:1px; text-align: center;">IIT Hyderabad</p>
-                <div class="row row-sm">
-                    <div class="col-12" style="width:147px; height:42px; font-size:20px; border-radius:15px;">
-                        <a href="https://topmate.io/eduvizo_india/56434" class="btn boook-btn">Connect Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-	    
-	    <div class="profile-widget" class="profile-widget" style="border-radius:15px;  margin: 5px">
-            <div class="do">
-                <a href="https://topmate.io/eduvizo_india/56434">
-
-                    <center>
-                        <img class="img-fluid" alt="User Image" src="assets/img/tutors/tarushi.jpeg"
-                            style="width:114px; height:114px; text-align:center; border-radius:15px;">
-                    </center>
-                </a>
-            </div>
-            <div class="pro-content">
-                <h3 class="title">
-                    <a href="https://topmate.io/eduvizo_india/56434"></a>
-                </h3>
-
-                <center>
-                    <p style="width:161px; color:#000; margin-top:-30px;">
-                        <strong>
-                            Tarushi Singla
-                        </strong>
-                    </p>
-                </center>
-                <p style="font-size:15px; margin-top:1px; text-align: center;">IIT Ropar</p>
-                <div class="row row-sm">
-                    <div class="col-12" style="width:147px; height:42px; font-size:20px; border-radius:15px;">
-                        <a href="https://topmate.io/eduvizo_india/56434" class="btn boook-btn">Connect Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-	    
-	    <div class="profile-widget" class="profile-widget" style="border-radius:15px;  margin: 5px">
-            <div class="do">
-                <a href="https://topmate.io/eduvizo_india/56434">
-
-                    <center>
-                        <img class="img-fluid" alt="User Image" src="assets/img/tutors/titiksha.jpeg"
-                            style="width:114px; height:114px; text-align:center; border-radius:15px;">
-                    </center>
-                </a>
-            </div>
-            <div class="pro-content">
-                <h3 class="title">
-                    <a href="https://topmate.io/eduvizo_india/56434"></a>
-                </h3>
-
-                <center>
-                    <p style="width:161px; color:#000; margin-top:-30px;">
-                        <strong>
-                            Titiksha Behal
-                        </strong>
-                    </p>
-                </center>
-                <p style="font-size:15px; margin-top:1px; text-align: center;">IIT Mandi</p>
-                <div class="row row-sm">
-                    <div class="col-12" style="width:147px; height:42px; font-size:20px; border-radius:15px;">
-                        <a href="https://topmate.io/eduvizo_india/56434" class="btn boook-btn">Connect Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-	    
-	    <div class="profile-widget" class="profile-widget" style="border-radius:15px;  margin: 5px">
-            <div class="do">
-                <a href="https://topmate.io/eduvizo_india/56434">
-
-                    <center>
-                        <img class="img-fluid" alt="User Image" src="assets/img/tutors/yadvender.jpeg"
-                            style="width:114px; height:114px; text-align:center; border-radius:15px;">
-                    </center>
-                </a>
-            </div>
-            <div class="pro-content">
-                <h3 class="title">
-                    <a href="https://topmate.io/eduvizo_india/56434"></a>
-                </h3>
-
-                <center>
-                    <p style="width:161px; color:#000; margin-top:-30px;">
-                        <strong>
-                            Yadvendra Singh
-                        </strong>
-                    </p>
-                </center>
-                <p style="font-size:15px; margin-top:1px; text-align: center;">IIT Delhi</p>
-                <div class="row row-sm">
-                    <div class="col-12" style="width:147px; height:42px; font-size:20px; border-radius:15px;">
-                        <a href="https://topmate.io/eduvizo_india/56434" class="btn boook-btn">Connect Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-	   
-
-	    
-	    
     </div>
-<!-- 
-    <section class=" section-doctor" style="width:90%; margin:auto; margin-top: 40px;" id="title_message">
-        <div class="col-lg-12" style="width:1277px; margin-left:-30px; margin-top:-80px;">
-            <div class="row">
 
-                <div class="col-lg-2">
-                    <img src="assets/img/service/1.png">
-                </div>
 
-                <div class="col-lg-2">
-                    <img src="assets/img/service/2.png">
-                </div>
-
-                <div class="col-lg-2">
-                    <img src="assets/img/service/3.png">
-                </div>
-
-                <div class="col-lg-2">
-                    <img src="assets/img/service/4.png">
-                </div>
-
-                <div class="col-lg-2">
-                    <img src="assets/img/service/5.png">
-                </div>
-
-                <div class="col-lg-2">
-                    <img src="assets/img/service/6.png">
-                </div>
-
+    <div style="margin-top: 100px; width: 90%; margin: auto;" class="container flex flex-wrap flex-row justify-around">
+        <div class="card_box flex flex-col justify-between flex-grow-1">
+        <a href="https://topmate.io/eduvizo_india/56434"><img
+            class="img-fluid-1"
+            style="width:100%; text-align:center; border-radius:15px;"
+            src="assets/img/tutors/aman.jpeg"
+            alt="Card image cap"
+        /></a>
+        <div class="card-body">
+            <!-- <h5 class="card-title">Card title</h5> -->
+            <p class="text-muted" style="text-align: center;">Aman Mall <br> <span class="font-weight-bold" style="color:black">IIT Guwahati</span></p>
+        </div>
+        <div class="card-footer">
+            <small class="text-muted">
+            <a href="https://topmate.io/eduvizo_india/56434" target="_blank" class="btn btn-primary btn-block"> Connect Now</a></small>
+        </div>
+        </div>
+        <div class="card_box flex flex-col justify-between flex-grow-1">
+            <a href="https://topmate.io/eduvizo_india/56434"><img
+                class="img-fluid-1"
+                style="width:100%; text-align:center; border-radius:15px;"
+                src="assets/img/tutors/anoushka.jpeg"
+                alt="Card image cap"
+            /></a>
+        <div class="card-body">
+          <!-- <h5 class="card-title">Card title</h5> -->
+          <p class="text-muted" style="text-align: center;">Anoushka Arya <br> <span class="font-weight-bold" style="color:black">NIT Allahabad</span></p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">
+            <a href="https://topmate.io/eduvizo_india/56434" target="_blank" class="btn btn-primary btn-block"> Connect Now</a></small>
+        </div>
+      </div>
+      <div class="card_box flex flex-col justify-between flex-grow-1">
+        <a href="https://topmate.io/eduvizo_india/56434"><img
+            class="img-fluid-1"
+        style="width:100%; text-align:center; border-radius:15px;"
+          src="assets/img/tutors/aryaman.jpeg"
+            alt="Card image cap"
+        /></a>
+        <div class="card-body">
+          <!-- <h5 class="card-title">Card title</h5> -->
+          <p class="text-muted" style="text-align: center;">Aryaman Mihir Seth <br> <span class="font-weight-bold" style="color:black">IIT Bombay</span></p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">
+            <a href="https://topmate.io/eduvizo_india/56434" target="_blank" class="btn btn-primary btn-block"> Connect Now</a></small>
+        </div>
+      </div>
+      <div class="card_box flex flex-col justify-between flex-grow-1">
+        <a href="https://topmate.io/eduvizo_india/56434"><img
+            class="img-fluid-1"
+        style="width:100%; text-align:center; border-radius:15px;"
+          src="assets/img/tutors/eshan.jpeg"
+            alt="Card image cap"
+        /></a>
+        <div class="card-body">
+          <!-- <h5 class="card-title">Card title</h5> -->
+          <p class="text-muted" style="text-align: center;">Eshan Gupta <br> <span class="font-weight-bold" style="color:black">IIT Hyderabad</span></p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">
+            <a href="https://topmate.io/eduvizo_india/56434" target="_blank" class="btn btn-primary btn-block"> Connect Now</a></small>
+        </div>
+      </div>
+      <div class="card_box flex flex-col justify-between flex-grow-1">
+        <a href="https://topmate.io/eduvizo_india/56434"><img
+            class="img-fluid-1"
+        style="width:100%; text-align:center; border-radius:15px;"
+          src="assets/img/tutors/mahesh.jpg"
+            alt="Card image cap"
+        /></a>
+        <div class="card-body">
+          <!-- <h5 class="card-title">Card title</h5> -->
+          <p class="text-muted" style="text-align: center;">Mahesh Baijal <br> <span class="font-weight-bold" style="color:black">IIT Bombay</span></p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">
+            <a href="https://topmate.io/eduvizo_india/56434" target="_blank" class="btn btn-primary btn-block"> Connect Now</a></small>
+        </div>
+      </div>
+      <div class="card_box flex flex-col justify-between flex-grow-1">
+        <a href="https://topmate.io/eduvizo_india/56434"><img
+            class="img-fluid-1"
+        style="width:100%; text-align:center; border-radius:15px;"
+          src="assets/img/tutors/nitya.jpeg"
+            alt="Card image cap"
+        /></a>
+        <div class="card-body">
+          <!-- <h5 class="card-title">Card title</h5> -->
+          <p class="text-muted" style="text-align: center;">Nitya Aggarwal <br> <span class="font-weight-bold" style="color:black">IIT Kanpur</span></p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">
+            <a href="https://topmate.io/eduvizo_india/56434" target="_blank" class="btn btn-primary btn-block"> Connect Now</a></small>
+        </div>
+      </div>
+      <div class="card_box flex flex-col justify-between flex-grow-1">
+        <a href="https://topmate.io/eduvizo_india/56434"><img
+            class="img-fluid-1"
+        style="width:100%; text-align:center; border-radius:15px;"
+          src="assets/img/tutors/satyam.jpeg"
+            alt="Card image cap"
+        /></a>
+        <div class="card-body">
+          <!-- <h5 class="card-title">Card title</h5> -->
+          <p class="text-muted" style="text-align: center;">Satyam Saroj <br> <span class="font-weight-bold" style="color:black">IIT Mandi</span></p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">
+            <a href="https://topmate.io/eduvizo_india/56434" target="_blank" class="btn btn-primary btn-block"> Connect Now</a></small>
+        </div>
+      </div>
+      <div class="card_box flex flex-col justify-between flex-grow-1">
+        <a href="https://topmate.io/eduvizo_india/56434"><img
+            class="img-fluid-1"
+        style="width:100%; text-align:center; border-radius:15px;"
+          src="assets/img/tutors/shashank.jpeg"
+            alt="Card image cap"
+        /></a>
+        <div class="card-body">
+          <!-- <h5 class="card-title">Card title</h5> -->
+          <p class="text-muted" style="text-align: center;">Shashank Kumar <br> <span class="font-weight-bold" style="color:black">IIT Jodhpur</span></p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">
+            <a href="https://topmate.io/eduvizo_india/56434" target="_blank" class="btn btn-primary btn-block"> Connect Now</a></small>
+        </div>
+      </div>
+      <div class="card_box flex flex-col justify-between flex-grow-1">
+        <a href="https://topmate.io/eduvizo_india/56434"><img
+            class="img-fluid-1"
+        style="width:100%; text-align:center; border-radius:15px;"
+          src="assets/img/tutors/tanmay.jpeg"
+            alt="Card image cap"
+        /></a>
+        <div class="card-body">
+          <!-- <h5 class="card-title">Card title</h5> -->
+          <p class="text-muted" style="text-align: center;">Tanmay Garg<br> <span class="font-weight-bold" style="color:black">IIT Hyderabad</span></p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">
+            <a href="https://topmate.io/eduvizo_india/56434" target="_blank" class="btn btn-primary btn-block"> Connect Now</a></small>
+        </div>
+      </div>
+      <div class="card_box flex flex-col justify-between flex-grow-1">
+        <a href="https://topmate.io/eduvizo_india/56434"><img
+            class="img-fluid-1"
+        style="width:100%; text-align:center; border-radius:15px;"
+          src="assets/img/tutors/tarushi.jpeg"
+            alt="Card image cap"
+        /></a>
+        <div class="card-body">
+          <!-- <h5 class="card-title">Card title</h5> -->
+          <p class="text-muted" style="text-align: center;">Tarushi Singla <br> <span class="font-weight-bold" style="color:black">IIT Ropar</span></p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">
+            <a href="https://topmate.io/eduvizo_india/56434" target="_blank" class="btn btn-primary btn-block"> Connect Now</a></small>
+        </div>
+      </div>
+      <div class="card_box flex flex-col justify-between flex-grow-1">
+        <a href="https://topmate.io/eduvizo_india/56434"><img
+            class="img-fluid-1"
+            style="width:100%; text-align:center; border-radius:15px;"
+              src="assets/img/tutors/titiksha.jpeg"
+            alt="Card image cap"
+        /></a>
+        <div class="card-body">
+          <!-- <h5 class="card-title">Card title</h5> -->
+          <p class="text-muted" style="text-align: center;">Titiksha Behal <br> <span class="font-weight-bold" style="color:black">IIT Mandi</span></p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">
+            <a href="https://topmate.io/eduvizo_india/56434" target="_blank" class="btn btn-primary btn-block"> Connect Now</a></small>
+        </div>
+      </div>
+      <div class="card_box flex flex-col justify-between flex-grow-1">
+        <a href="https://topmate.io/eduvizo_india/56434"><img
+            class="img-fluid-1"
+            style="width:100%; text-align:center; border-radius:15px;"
+              src="assets/img/tutors/yadvender.jpeg"
+            alt="Card image cap"
+        /></a>
+        <div class="card-body">
+          <!-- <h5 class="card-title">Card title</h5> -->
+          <p class="text-muted" style="text-align: center;">Yadvendra Singh <br> <span class="font-weight-bold" style="color:black">IIT Delhi</span></p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">
+            <a href="https://topmate.io/eduvizo_india/56434" target="_blank" class="btn btn-primary btn-block"> Connect Now</a></small>
+        </div>
+      </div>
+      <div class="card_box flex flex-col justify-between flex-grow-1">
+        <a href="https://topmate.io/eduvizo_india/56434"><img
+            class="img-fluid-1"
+        style="width:100%; text-align:center; border-radius:15px;"
+          src="assets/img/tutors/bhunesh.jpeg"
+            alt="Card image cap"
+        /></a>
+            <div class="card-body">
+            <!-- <h5 class="card-title">Card title</h5> -->
+            <p class="text-muted" style="text-align: center;">Bhunesh Bansal <br> <span class="font-weight-bold" style="color:black">Thapar Institute of Engineering & Technology</span></p>
             </div>
+            <div class="card-footer">
+            <small class="text-muted">
+                <a href="https://topmate.io/eduvizo_india/56434" target="_blank" class="btn btn-primary btn-block"> Connect Now</a></small>
             </div>
-    </section> -->
-
+        </div>
+    </div>
 
     <section class=" section-doctor" style="width:90%; margin:auto; margin-top: 40px;">
         <div class="" style="width:100%;  margin-top:-80px;">
@@ -642,155 +495,80 @@
         </div>
     </section>
 
-    <!-- <section class=" section-doctor" style="width:90%; margin: 40px auto;" id="title_message">
-        <div class="col-lg-12" style="width:1277px; margin-left:-30px; margin-top:-80px;">
-            <div class="row">
-
-                <div class="col-lg-2">
-                    <img src="assets/img/service/1.png">
-                </div>
-
-                <div class="col-lg-2">
-                    <img src="assets/img/service/2.png">
-                </div>
-
-                <div class="col-lg-2">
-                    <img src="assets/img/service/3.png">
-                </div>
-
-                <div class="col-lg-2">
-                    <img src="assets/img/service/4.png">
-                </div>
-
-                <div class="col-lg-2">
-                    <img src="assets/img/service/5.png">
-                </div>
-
-                <div class="col-lg-2">
-                    <img src="assets/img/service/6.png">
-                </div>
-
-            </div>
-            </div>
-    </section> -->
-
-<!-- 
-    <section class=" section-doctor hidedesktop" style="width:90%; margin:auto; margin-top: 40px;">
-        <div class="col-lg-12" style="width:100%;  ">
-            <div class="row">
-
-                <div class="col-lg-2">
-                    <img src="assets/img/service/1.png">
-                </div>
-
-                <div class="col-lg-2">
-                    <img src="assets/img/service/2.png">
-                </div>
-
-                <div class="col-lg-2">
-                    <img src="assets/img/service/3.png">
-                </div>
-
-                <div class="col-lg-2">
-                    <img src="assets/img/service/4.png">
-                </div>
-
-                <div class="col-lg-2">
-                    <img src="assets/img/service/5.png">
-                </div>
-
-                <div class="col-lg-2">
-                    <img src="assets/img/service/6.png">
-                </div>
-
-            </div>
-        </div>
-    </section> -->
-
-
-    <!-- Need of  Eduvizo -->
-    <div id="how_use" style="width: 90%;margin: auto; text-align: center;" class="mt-12">
-        <div class="section section-specialities" >
-            <div class="container-fluid">
-            <div class="">
-            <div class="container-fluid">
-            <div class="row mx-1 mt-2">
-                <div class="col-lg-10">
-                <h2 class="mx-1 heading" style="font-size:48px; color:#000; font-weight:700;">Do you really need EduVizo ?</h2><br><br>
-                <p class="sub-title mx-1" style="font-size:32px;  color:#2D2D2D;">
-                We asked almost a thousand students-
-                <p class="" style="font-size:32px; font-weight:600; color:#2D2D2D;">“What do you do when you choose the college and branch you want to be in?”
-                </p>
-                <p class="sub-title" style="font-size:32px; font-weight:500; color:#007FFF;">
-                This is what we found:</p>
-                </div>
-                <div class="col-lg-2 needImg">
-                <img src="assets/img/service/new.png">
-                </div>
-            </div>
-            </div>
-            </div>
-            </div>
-        </div>
-        <div class="section section-doctor" id="how_use">
-            <div class="container-fluid my-2">
-            <div class="row">
-            <div class="col m-1">
-            <img class="img-fluid mx-2" src="assets/img/service/new1.png">
-            </div>
-            </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="contact" style="width: 90%; margin: auto; margin-top: 80px;">
-        <div class="col-lg-12">
-            <div class="row">
-                <div class="col-lg-8">
-                <div
-                style="background:rgba(0, 145, 220, 0.09); border-radius:15px; padding-left:50px; padding-right:50px; padding-top: 20px;">
-                <p style="font-size:48px; font-weight:666; color:#0091DC; text-align:left;">How can we
-                help you?</p>
-                <p style="font-size:24px; font-weight:666; color:#2D2D2D; text-align:left;">Please let
-                us know by filling out this form.</p>
-                <form action="">
-                <div class="form-group form-focus">
-                    <input type="text" class="form-control floating">
-                    <label class="focus-label">Name</label>
-                </div>
-                <div class="form-group form-focus">
-                    <input type="text" class="form-control floating">
-                    <label class="focus-label">Phone</label>
-                </div>
-                <div class="form-group form-focus">
-                    <input type="text" class="form-control floating">
-                    <label class="focus-label">E-mail</label>
-                </div>
-                <div class="form-group form-focus">
-                    <input type="text" class="form-control floating">
-                    <label class="focus-label">Address</label>
-                </div>
-                <button class="btn btn-primary btn-block btn-lg login-btn"
-                    style="background-color:#F9AF2A; width:50%;" type="submit">Submit</button>
-                <div class="login-or">
-                    <span class="or-line"></span>
-                </div>
-                </div>
-                </form>
-                </div>
-                <div class="col-lg-4 my-auto text-center">
-                    <p style="font-size:36px; font-weight:600;"> E-Mail us at<p>
-                    <p style="font-size:22px; margin-top:0px; color:#007FFF; font-weight:600;">contact@eduvizo.com<p>
-                    <!-- <img src="assets/img/social.png" style="margin-right:30px; margin-left:30px;">
-                    <img src="assets/img/social-3.png" style="margin-right:30px;">
-                    <img src="assets/img/social-2.png" style="margin-right:30px;"> -->
+        <!-- Need of  Eduvizo -->
+        <div id="how_use" style="width: 90%;margin: auto; text-align: center;" class="mt-12">
+            <div class="section section-specialities" >
+                <div class="container-fluid">
+                    <div class="">
+                        <div class="container-fluid">
+                            <div class="row mx-1 mt-2">
+                                <div class="col-lg-10">
+                                    <h2 class="mx-1 heading" style="font-size:48px; color:#000; font-weight:700;">Do you really need EduVizo ?</h2><br><br>
+                                    <p class="sub-title mx-1" style="font-size:32px;  color:#2D2D2D;">
+                                    We asked almost a thousand students-
+                                    <p class="" style="font-size:32px; font-weight:600; color:#2D2D2D;">“What do you do when you choose the college and branch you want to be in?”
+                                    </p>
+                                    <p class="sub-title" style="font-size:32px; font-weight:500; color:#007FFF;">
+                                    This is what we found:</p>
+                                </div>
+                                <div class="col-lg-2 needImg">
+                                    <img src="assets/img/service/new.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-           <!-- Need of Eduvizo-->
-    </div>
-    <!-- /Main Wrapper -->
+            
+
+        <div id="contact" style="width: 90%; margin: auto; margin-top: 80px;">
+            <div class="col-lg-12">
+                <div class="row">
+                    <div class="col-lg-8">
+                    <div
+                    style="background:rgba(0, 145, 220, 0.09); border-radius:15px; padding-left:50px; padding-right:50px; padding-top: 20px;">
+                    <p style="font-size:48px; font-weight:666; color:#0091DC; text-align:left;">How can we
+                    help you?</p>
+                    <p style="font-size:24px; font-weight:666; color:#2D2D2D; text-align:left;">Please let
+                    us know by filling out this form.</p>
+                    <form action="">
+                    <div class="form-group form-focus">
+                        <input type="text" class="form-control floating">
+                        <label class="focus-label">Name</label>
+                    </div>
+                    <div class="form-group form-focus">
+                        <input type="text" class="form-control floating">
+                        <label class="focus-label">Phone</label>
+                    </div>
+                    <div class="form-group form-focus">
+                        <input type="text" class="form-control floating">
+                        <label class="focus-label">E-mail</label>
+                    </div>
+                    <div class="form-group form-focus">
+                        <input type="text" class="form-control floating">
+                        <label class="focus-label">Address</label>
+                    </div>
+                    <button class="btn btn-primary btn-block btn-lg login-btn"
+                        style="background-color:#F9AF2A; width:50%;" type="submit">Submit</button>
+                    <div class="login-or">
+                        <span class="or-line"></span>
+                    </div>
+                    </div>
+                    </form>
+                    </div>
+                    <div class="col-lg-4 my-auto text-center">
+                        <p style="font-size:36px; font-weight:600;"> E-Mail us at<p>
+                        <p style="font-size:22px; margin-top:0px; color:#007FFF; font-weight:600;">contact@eduvizo.com<p>
+                        <!-- <img src="assets/img/social.png" style="margin-right:30px; margin-left:30px;">
+                        <img src="assets/img/social-3.png" style="margin-right:30px;">
+                        <img src="assets/img/social-2.png" style="margin-right:30px;"> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+            <!-- /Main Wrapper -->
 	<!-- jQuery -->
 	<script src="assets/js/jquery.min.js"></script>
 
@@ -804,6 +582,4 @@
 	<!-- Custom JS -->
 	<script src="assets/js/script.js"></script>
 </body>
-
-
 </html>
