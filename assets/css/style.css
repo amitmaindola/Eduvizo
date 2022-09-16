@@ -1981,7 +1981,7 @@ button.bg-danger:hover {
     width: 31px;
 }
 .bar-icon span {
-    background-color: #0de0fe;
+    background-color: white;
     display: block;
     float: left;
     height: 3px;
